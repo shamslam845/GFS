@@ -429,6 +429,10 @@
     <Compile Include="Migrations\201505072020112_update.Designer.cs">
       <DependentUpon>201505072020112_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505110119156_loginging.cs" />
+    <Compile Include="Migrations\201505110119156_loginging.Designer.cs">
+      <DependentUpon>201505110119156_loginging.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Email.cs" />
     <Compile Include="Models\Feedback.cs" />
@@ -482,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505072020112_update.resx">
       <DependentUpon>201505072020112_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505110119156_loginging.resx">
+      <DependentUpon>201505110119156_loginging.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

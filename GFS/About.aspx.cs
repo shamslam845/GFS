@@ -13,7 +13,7 @@ namespace GFS
 {
     public partial class About : Page
     {
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["GFS"].ConnectionString);
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["GFSContext"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
             conn.Open();

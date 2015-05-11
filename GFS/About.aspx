@@ -8,7 +8,7 @@
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Upload" />
     </p>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GFS %>" DeleteCommand="DELETE FROM [Emails] WHERE [EmailID] = @EmailID" InsertCommand="INSERT INTO [Emails] ([EmailAddress], [SectionID]) VALUES (@EmailAddress, @SectionID)" SelectCommand="SELECT * FROM [Emails]" UpdateCommand="UPDATE [Emails] SET [EmailAddress] = @EmailAddress, [SectionID] = @SectionID WHERE [EmailID] = @EmailID">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GFSContext %>" DeleteCommand="DELETE FROM [Emails] WHERE [EmailID] = @EmailID" InsertCommand="INSERT INTO [Emails] ([EmailAddress], [SectionID]) VALUES (@EmailAddress, @SectionID)" SelectCommand="SELECT * FROM [Emails]" UpdateCommand="UPDATE [Emails] SET [EmailAddress] = @EmailAddress, [SectionID] = @SectionID WHERE [EmailID] = @EmailID">
             <DeleteParameters>
                 <asp:Parameter Name="EmailID" Type="Int32" />
             </DeleteParameters>

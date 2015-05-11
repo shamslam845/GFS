@@ -157,7 +157,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GFS %>" SelectCommand="SELECT Sections.CourseName, FeedbackContainers.DateTimes, Forms.Title, Sections.SectionID, Sections.SectionNumber, Feedbacks.FeedbackID, Feedbacks.Message FROM FeedbackContainers INNER JOIN Feedbacks ON FeedbackContainers.FeedbackContainerID = Feedbacks.FeedbackContainerID INNER JOIN FormContainers ON FeedbackContainers.FormContainerID = FormContainers.FormContainerID INNER JOIN Forms ON FormContainers.FormContainerID = Forms.FormContainerID INNER JOIN Sections ON Feedbacks.SectionID = Sections.SectionID"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GFSContext %>" SelectCommand="SELECT Sections.CourseName, FeedbackContainers.DateTimes, Forms.Title, Sections.SectionID, Sections.SectionNumber, Feedbacks.FeedbackID, Feedbacks.Message FROM FeedbackContainers INNER JOIN Feedbacks ON FeedbackContainers.FeedbackContainerID = Feedbacks.FeedbackContainerID INNER JOIN FormContainers ON FeedbackContainers.FormContainerID = FormContainers.FormContainerID INNER JOIN Forms ON FormContainers.FormContainerID = Forms.FormContainerID INNER JOIN Sections ON Feedbacks.SectionID = Sections.SectionID"></asp:SqlDataSource>
                 </td>
 
             </tr>

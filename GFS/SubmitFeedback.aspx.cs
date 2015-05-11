@@ -74,8 +74,6 @@ namespace GFS
                 {
                     if(aTextbox.Text == "")
                     {
-                        //aLabel = (Label)item.FindControl("MissLabel");
-                        //aLabel.Visible = true;
                         aTextbox.Visible = true;
                         missedCount++;
                     }

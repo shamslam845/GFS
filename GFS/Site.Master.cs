@@ -76,13 +76,6 @@ namespace GFS
             }
         }
 
-        //public IQueryable<FeedbackContainer> GetFeedbackContainers()
-        //{
-        //  var _db = new GFS.Models.FeedbackContainerContext();
-        //  IQueryable<FeedbackContainer> query = _db.Containers;
-        //  return query;
-        //}
-
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();

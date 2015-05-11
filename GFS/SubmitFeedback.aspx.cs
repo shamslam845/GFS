@@ -44,9 +44,7 @@ namespace GFS
 
         protected void FeedbackSubmitBtn_Click( object sender, EventArgs e )
         {
-            Label aLabel;
             int missedCount = 0;
-            int totalCount = 0;
             //create feedback container to hold the feedback
             int aFormContainerID = Convert.ToInt32(SectionDropdown.SelectedValue);
             FeedbackContainer aFeedbackContainer = new FeedbackContainer

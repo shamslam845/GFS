@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="GFSContext-Web.config Connection String" description="GFSContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:xwvutn19yx.database.windows.net,1433;Database=GFSDatabase;User ID=GFSAdmin@xwvutn19yx;Password=Gfscsuf462;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\shamslam845\\Documents\\462\\GFS\\GFS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GFSContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\shamslam845\\Documents\\Visual\ Studio\ 2013\\Projects\\GFS\\GFS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GFSContext']/@connectionString" />
   </parameter>
   <parameter name="ConnectionString-Web.config Connection String" description="ConnectionString Connection String used in web.config by the application to access the database." defaultValue="ConnectionString_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\shamslam845\\Documents\\462\\GFS\\GFS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\shamslam845\\Documents\\Visual\ Studio\ 2013\\Projects\\GFS\\GFS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
   </parameter>
   <parameter name="GFS-Web.config Connection String" description="GFS Connection String used in web.config by the application to access the database." defaultValue="GFS_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\shamslam845\\Documents\\462\\GFS\\GFS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GFS']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\shamslam845\\Documents\\Visual\ Studio\ 2013\\Projects\\GFS\\GFS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GFS']/@connectionString" />
   </parameter>
 </parameters>

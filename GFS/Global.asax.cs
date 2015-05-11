@@ -21,10 +21,10 @@ namespace GFS
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             // Initialize the product database.
-            //Database.SetInitializer(new GFSDatabaseInitializer());
+            Database.SetInitializer(new GFSDatabaseInitializer());
 
-            //RoleActions roleActions = new RoleActions();
-            //roleActions.AddUserAndRole();
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }

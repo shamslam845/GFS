@@ -76,3 +76,4 @@ C:\Users\shamslam845\documents\visual studio 2013\Projects\GFS\GFS\obj\Release\G
 C:\Users\shamslam845\documents\visual studio 2013\Projects\GFS\GFS\obj\Release\GFS.csproj.GenerateResource.Cache
 C:\Users\shamslam845\documents\visual studio 2013\Projects\GFS\GFS\obj\Release\GFS.Migrations.Initial1.resources
 C:\Users\shamslam845\Documents\Visual Studio 2013\Projects\GFS\GFS\obj\Release\GFS.Migrations.update.resources
+C:\Users\shamslam845\Documents\Visual Studio 2013\Projects\GFS\GFS\obj\Release\GFS.Migrations.login.resources

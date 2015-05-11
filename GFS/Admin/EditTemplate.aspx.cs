@@ -1,5 +1,5 @@
 ﻿// Coded By: Nicholas Irikawa
-// Project: GFS
+// Project: GFS Anonymous Feedback System
 // Class: 462
 // Group: 2
 
@@ -73,9 +73,11 @@ namespace GFS.Admin
             Form aForm = (Form)e.Item.DataItem;
             string check = e.Item.GetType().ToString();
             TextBox aTextbox = (TextBox)e.Item.FindControl("BodyTextbox");
+            TextBox aTextbox2 = (TextBox)e.Item.FindControl("TitleBox");
             DropDownList aDropDownList = (DropDownList)e.Item.FindControl("RatingDropDown");
             if (aForm != null)
             {
+                aTextbox2.Visible = true;
                 if (aForm.FormType == 1)
                 {
                     aTextbox.Visible = true;
@@ -85,6 +87,47 @@ namespace GFS.Admin
                     aDropDownList.Visible = true;
                 }
             }
+        }
+
+        protected void EditButton_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            ListViewDataItem thisListView = (ListViewDataItem)b.NamingContainer;
+            //ListView idk = (ListView)thisListView.NamingContainer;
+            DropDownList aDropDownList = (DropDownList)thisListView.FindControl("TypeDropDown");
+            TextBox aTextBox = (TextBox)thisListView.FindControl("TitleBox");
+            aTextBox.ReadOnly = false;
+            Button aButton = (Button)thisListView.FindControl("SaveButton");
+            aButton.Visible = true;
+            HiddenField aField = (HiddenField)thisListView.FindControl("FormTypeField");
+            if(aField.Value == "1")
+            {
+                aDropDownList.Items.Add(new ListItem("Change to Rating Form", "2"));
+            }
+            else
+                aDropDownList.Items.Add(new ListItem("Change to Question Form", "1"));
+            aDropDownList.Visible = true;
+            b.Visible = false;
+        }
+
+        protected void TypeDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SaveButton_Click(object sender, EventArgs e)
+        {
+            Button thisButton = (Button)sender;
+            ListViewDataItem thisListView = (ListViewDataItem)thisButton.NamingContainer;
+            HiddenField aField = (HiddenField)thisListView.FindControl("FormIDField");
+            TextBox aTextBox = (TextBox)thisListView.FindControl("TitleBox");
+            Button editButton = (Button)thisListView.FindControl("EditButton");
+            editButton.Visible = true;
+            string aString = aTextBox.Text;
+            DropDownList aDropDownList = (DropDownList)thisListView.FindControl("TypeDropDown");
+            aTextBox.ReadOnly = true;
+            aDropDownList.Visible = false;
+            thisButton.Visible = false;
         }
     }
 }

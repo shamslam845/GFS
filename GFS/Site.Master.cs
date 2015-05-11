@@ -73,6 +73,7 @@ namespace GFS
             if (HttpContext.Current.User.IsInRole("canEdit"))
             {
                 adminLink.Visible = true;
+                createLink.Visible = true;
             }
         }
 

@@ -44,9 +44,7 @@ namespace GFS
 
         protected void FeedbackSubmitBtn_Click( object sender, EventArgs e )
         {
-            Label aLabel;
             int missedCount = 0;
-            int totalCount = 0;
             //create feedback container to hold the feedback
             int aFormContainerID = Convert.ToInt32(SectionDropdown.SelectedValue);
             FeedbackContainer aFeedbackContainer = new FeedbackContainer
@@ -97,8 +95,6 @@ namespace GFS
                 {
                     if (aDropDown.SelectedValue == "null")
                     {
-                        //aLabel = (Label)item.FindControl("MissLabel");
-                        //aLabel.Visible = true;
                         aDropDown.Visible = true;
                         missedCount++;
                     }
@@ -215,16 +211,6 @@ namespace GFS
             return query;
         }
 
-        //public IQueryable<Form> GetRatingForms([Control] int? containerId)
-        //{
-        //    IQueryable<Form> query = _db.Forms;
-        //    if (containerId.HasValue && containerId > 0)
-        //    {
-        //        query = query.Where(p => p.FormContainerID == containerId && p.FormType == 2);
-        //    }
-        //    return query;
-        //}
-
         protected void CourseDropdown_Init(object sender, EventArgs e)
         {
             IQueryable<Section> query = _db.Sections;
@@ -267,7 +253,6 @@ namespace GFS
                 SectionLabel.Visible = false;
                 FeedbackSubmitBtn.Visible = false;
             }
-            //SectionDropdown.AppendDataBoundItems = false;
         }
 
         public void SectionDropdown_SelectedIndexChanged(Object sender, EventArgs e)
@@ -284,11 +269,9 @@ namespace GFS
                 
         }
 
-        protected void feedbackFormList_Load(object sender, EventArgs e)
-        {
-            //feedbackFormList.Items.Clear();
-            int i = 0;
-        }
+        //protected void feedbackFormList_Load(object sender, EventArgs e)
+        //{
+        //}
             
     }
 }

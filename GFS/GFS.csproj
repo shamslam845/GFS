@@ -200,7 +200,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CreateFeedbackForm.aspx" />
+    <Content Include="Admin\CreateFeedbackForm.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -399,11 +399,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateFeedbackForm.aspx.cs">
+    <Compile Include="Admin\CreateFeedbackForm.aspx.cs">
       <DependentUpon>CreateFeedbackForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateFeedbackForm.aspx.designer.cs">
+    <Compile Include="Admin\CreateFeedbackForm.aspx.designer.cs">
       <DependentUpon>CreateFeedbackForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">

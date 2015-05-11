@@ -72,8 +72,6 @@ namespace GFS
                 {
                     if(aTextbox.Text == "")
                     {
-                        //aLabel = (Label)item.FindControl("MissLabel");
-                        //aLabel.Visible = true;
                         aTextbox.Visible = true;
                         missedCount++;
                     }
@@ -97,8 +95,6 @@ namespace GFS
                 {
                     if (aDropDown.SelectedValue == "null")
                     {
-                        //aLabel = (Label)item.FindControl("MissLabel");
-                        //aLabel.Visible = true;
                         aDropDown.Visible = true;
                         missedCount++;
                     }

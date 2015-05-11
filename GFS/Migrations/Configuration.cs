@@ -5,7 +5,10 @@ namespace GFS.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using GFS.Models;
+    using GFS.Logic;
     using System.Collections.Generic;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     internal sealed class Configuration : DbMigrationsConfiguration<GFS.Models.GFSContext>
     {
@@ -23,6 +26,7 @@ namespace GFS.Migrations
             GetFeedbacks().ForEach(f => context.Feedbacks.Add(f));
             GetForms().ForEach(h => context.Forms.Add(h));
         }
+
 
         private static List<FormContainer> GetFormContainers()
         {

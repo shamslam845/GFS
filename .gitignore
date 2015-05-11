@@ -2,3 +2,5 @@ GFS.v12.suo
 *.mdf
 GFS/App_Data/GFS_log.ldf
 *.cache
+*.cache
+GFS/obj/Release/Package/PackageTmp/bin/GFS.dll

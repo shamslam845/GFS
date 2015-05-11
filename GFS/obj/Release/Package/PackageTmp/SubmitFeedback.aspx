@@ -7,7 +7,7 @@
                 <h2>&nbsp;</h2>
             </hgroup>
             <div>
-                &nbsp;&nbsp;<asp:Label ID="CourseLabel" runat="server" Text="Select Your Course ID: "></asp:Label>
+                <asp:Label ID="CourseLabel" runat="server" Text="Select Your Course ID: "></asp:Label>
                 <asp:DropDownList ID="CourseDropdown" AutoPostBack="True" runat="server"
                 OnInit="CourseDropdown_Init" OnSelectedIndexChanged = "CourseDropdown_SelectedIndexChanged"
                 AppendDataBoundItems="true">
@@ -25,7 +25,7 @@
             <asp:ListView ID="feedbackFormList" runat="server" 
                 DataKeyNames="FormID" GroupItemCount="1"
                 ItemType="GFS.Models.Form" SelectMethod="GetQuestionForms" 
-                OnItemCreated="feedbackFormList_ItemCreated" OnLoad="feedbackFormList_Load" EnableViewState="true">
+                OnItemCreated="feedbackFormList_ItemCreated" EnableViewState="false">
                 <EmptyDataTemplate>
                 </EmptyDataTemplate>
                 <EmptyItemTemplate>
@@ -45,9 +45,6 @@
                             <tr>
                                 <td>
                                     <%#:String.Format("{0:c}", Item.Title)%>
-                                    <br>
-                                    </br>
-                                    <asp:Label ID="MissLabel" runat="server" Text="You did not fill this out." ForeColor="Red" Visible="False"></asp:Label>
                                     <br>
                                     </br>
                                     <asp:HiddenField ID="FormIDField" Value=<%# Eval("FormID") %> runat="server" />

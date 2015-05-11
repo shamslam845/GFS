@@ -194,6 +194,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\EditTemplate.aspx" />
     <Content Include="Admin\FeedbackList.aspx" />
     <Content Include="Admin\FeedbackReply.aspx" />
     <Content Include="Contact.aspx" />
@@ -367,6 +368,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\EditTemplate.aspx.cs">
+      <DependentUpon>EditTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditTemplate.aspx.designer.cs">
+      <DependentUpon>EditTemplate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FeedbackList.aspx.cs">
       <DependentUpon>FeedbackList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -480,15 +488,19 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505071021316_Initial.resx">
       <DependentUpon>201505071021316_Initial.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505071124324_Initial1.resx">
       <DependentUpon>201505071124324_Initial1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505072020112_update.resx">
       <DependentUpon>201505072020112_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505110119156_loginging.resx">
       <DependentUpon>201505110119156_loginging.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

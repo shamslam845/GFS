@@ -125,73 +125,6 @@ namespace GFS
             CourseDropdown.Visible = false;
             SectionLabel.Visible = false;
             CourseLabel.Visible = false;
-            //    aForm = (Form)item.DataItem;
-            //    if (true)
-            //    {
-                    
-            //        if (aForm.FormType == 1)
-            //        {
-            //            TextBox aTextbox = (TextBox)item.FindControl("BodyTextbox");
-            //            if (aTextbox.Text == "")
-            //            {
-            //                missedCount++;
-            //                aLabel = (Label)item.FindControl("MissLabel");
-            //                aLabel.Visible = true;
-            //            }
-
-            //        }
-            //        else if (aForm.FormType == 2)
-            //        {
-            //            DropDownList aDropDownList = (DropDownList)item.FindControl("RatingDropDown");
-            //            if (aDropDownList.SelectedValue == "null")
-            //            {
-            //                missedCount++;
-            //                aLabel = (Label)item.FindControl("MissLabel");
-            //                aLabel.Visible = true;
-            //            }
-
-            //        }
-            //        totalCount++;
-            //        aLabel = (Label)item.FindControl("MissLabel");
-            //        aLabel.Visible = true;
-            //    }
-            //}
-
-            //if (missedCount == 9)
-            //{
-            //    // create a new feedback container
-            //    int aFormContainerID = Convert.ToInt32(SectionDropdown.SelectedValue);
-            //    FeedbackContainer aFeedbackContainer = new FeedbackContainer
-            //    {
-            //        DateTimes = DateTime.Now,
-            //        FormContainerID = Convert.ToInt32(aFormContainerID),
-            //    };
-            //    // get its ID
-
-            //    _db.FeedbackContainers.Add(aFeedbackContainer);
-            //    _db.SaveChanges();
-
-            //    int aFeedbackContainerID = aFeedbackContainer.FeedbackContainerID;
-            //    foreach (ListViewDataItem item in feedbackFormList.Items)
-            //    {
-            //        TextBox aTextbox = (TextBox)item.FindControl("BodyTextbox");
-            //        HiddenField aField = (HiddenField)item.FindControl("FormIDField");
-            //        IQueryable<Section> sectionQuery = _db.Sections;
-            //        int aSectionID = Convert.ToInt32(SectionDropdown.SelectedItem.Text);
-            //        Feedback aFeedback = new Feedback
-            //        {
-            //            Message = aTextbox.Text,
-            //            UserID = "049058e1-965c-40af-adad-5fdd8a15c68c",
-            //            FeedbackContainerID = aFeedbackContainerID,
-            //            SectionID = Convert.ToInt32(SectionDropdown.SelectedItem.Text),
-            //        };
-            //        _db.Feedbacks.Add(aFeedback);
-            //        _db.SaveChanges();
-            //    }
-
-            //    // hide everything except the Thank You label
-            
-            //}
         }
 
         public IQueryable<Form> GetQuestionForms([Control] string SectionDropdown)
@@ -268,10 +201,6 @@ namespace GFS
             }
                 
         }
-
-        //protected void feedbackFormList_Load(object sender, EventArgs e)
-        //{
-        //}
             
     }
 }

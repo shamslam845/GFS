@@ -4,8 +4,7 @@ namespace GFS.Models
 {
     public class GFSContext : DbContext
     {
-        public GFSContext()
-            : base("GFSConnection")
+        public GFSContext() : base ("GFS")
         {
 
         }

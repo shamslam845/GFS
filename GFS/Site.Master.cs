@@ -74,6 +74,7 @@ namespace GFS
             {
                 adminLink.Visible = true;
                 createLink.Visible = true;
+                editLink.Visible = true;
             }
         }
 

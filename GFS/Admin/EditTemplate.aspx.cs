@@ -93,26 +93,51 @@ namespace GFS.Admin
         {
             Button b = (Button)sender;
             ListViewDataItem thisListView = (ListViewDataItem)b.NamingContainer;
-            //ListView idk = (ListView)thisListView.NamingContainer;
             DropDownList aDropDownList = (DropDownList)thisListView.FindControl("TypeDropDown");
             TextBox aTextBox = (TextBox)thisListView.FindControl("TitleBox");
             aTextBox.ReadOnly = false;
             Button aButton = (Button)thisListView.FindControl("SaveButton");
             aButton.Visible = true;
             HiddenField aField = (HiddenField)thisListView.FindControl("FormTypeField");
-            if(aField.Value == "1")
+            TextBox bodyText = (TextBox)thisListView.FindControl("BodyTextBox");
+            DropDownList ratingDrop = (DropDownList)thisListView.FindControl("RatingDropDown");
+            if (aField.Value == "1")
             {
+                bodyText.Visible = true;
                 aDropDownList.Items.Add(new ListItem("Change to Rating Form", "2"));
             }
             else
+            {
+                ratingDrop.Visible = true;
                 aDropDownList.Items.Add(new ListItem("Change to Question Form", "1"));
+            }
             aDropDownList.Visible = true;
             b.Visible = false;
         }
 
         protected void TypeDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            DropDownList thisDropDown = (DropDownList)sender;
+            ListViewDataItem thisListView = (ListViewDataItem)thisDropDown.NamingContainer;
+            TextBox bodyText = (TextBox)thisListView.FindControl("BodyTextBox");
+            DropDownList ratingDrop = (DropDownList)thisListView.FindControl("RatingDropDown");
+            
+            if(thisDropDown.SelectedValue == "1")
+            {
+                thisDropDown.Items.Clear();
+                thisDropDown.Items.Add(new ListItem("--Select One--", "null"));
+                thisDropDown.Items.Add(new ListItem("Change to Rating Form", "2"));
+                bodyText.Visible = true;
+                ratingDrop.Visible = false;
+            }
+            else if(thisDropDown.SelectedValue == "2")
+            {
+                thisDropDown.Items.Clear();
+                thisDropDown.Items.Add(new ListItem("--Select One--", "null"));
+                thisDropDown.Items.Add(new ListItem("Change to Question Form", "1"));
+                bodyText.Visible = false;
+                ratingDrop.Visible = true;
+            }
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -120,14 +145,30 @@ namespace GFS.Admin
             Button thisButton = (Button)sender;
             ListViewDataItem thisListView = (ListViewDataItem)thisButton.NamingContainer;
             HiddenField aField = (HiddenField)thisListView.FindControl("FormIDField");
+            HiddenField aTypeField = (HiddenField)thisListView.FindControl("FormTypeField");
             TextBox aTextBox = (TextBox)thisListView.FindControl("TitleBox");
             Button editButton = (Button)thisListView.FindControl("EditButton");
             editButton.Visible = true;
             string aString = aTextBox.Text;
             DropDownList aDropDownList = (DropDownList)thisListView.FindControl("TypeDropDown");
             aTextBox.ReadOnly = true;
-            aDropDownList.Visible = false;
+            //aDropDownList.Visible = false;
             thisButton.Visible = false;
+
+
+            int temp;
+            temp = Convert.ToInt32(aField.Value);
+            var myItem = (from c in _db.Forms where c.FormID == temp select c).FirstOrDefault();
+            myItem.Title = aTextBox.Text;
+
+            TextBox bodyText = (TextBox)thisListView.FindControl("BodyTextBox");
+            DropDownList ratingDrop = (DropDownList)thisListView.FindControl("RatingDropDown");
+            if (bodyText.Visible)
+                myItem.FormType = 1;
+            else
+                myItem.FormType = 2;
+            _db.SaveChanges();
+            
         }
     }
 }

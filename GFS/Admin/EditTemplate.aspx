@@ -14,7 +14,7 @@
             <asp:ListView ID="feedbackFormList" runat="server" 
                 DataKeyNames="FormID" GroupItemCount="1"
                 ItemType="GFS.Models.Form" SelectMethod="GetQuestionForms" 
-                OnItemCreated="feedbackFormList_ItemCreated" EnableViewState="false">
+                OnItemCreated="feedbackFormList_ItemCreated" EnableViewState="true">
                 <EmptyDataTemplate>
                 </EmptyDataTemplate>
                 <EmptyItemTemplate>
@@ -33,16 +33,18 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <%#:String.Format("{0:c}", Item.Title)%>
+                                    <asp:TextBox ID="TitleBox" runat="server" ReadOnly="True" EnableViewState="true" Width="430px" Visible="true" Text=<%# Eval("Title") %>></asp:TextBox>
                                     <asp:Button ID="EditButton" runat="server" Text="Edit" OnClick="EditButton_Click"
-                                        Visible="false" />
+                                        Visible="true" />
+                                    <asp:DropDownList ID="TypeDropDown" runat="server" OnSelectedIndexChanged="TypeDropDown_SelectedIndexChanged" AutoPostBack="true"
+                                                Visible="false" EnableViewState="true">
+                                            <asp:ListItem Selected="True" Value="null">--Select To Edit--</asp:ListItem>
+                                    </asp:DropDownList>
                                     <br>
-                                        <asp:DropDownList ID="TypeDropDown" runat="server" OnSelectedIndexChanged="TypeDropDown_SelectedIndexChanged" AutoPostBack="True"
-                                                Visible="false">
-                                            <asp:ListItem Selected="True" Value="null">--Select One--</asp:ListItem>
-                                            <asp:ListItem Value="1">Question</asp:ListItem>
-                                            <asp:ListItem Value="2">Star Rating</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <br />
+                                        <asp:Button ID="SaveButton" runat="server" Text="Save Changes" OnClick="SaveButton_Click"
+                                        Visible="false" />
+                                        <br />
                                     </br>
                                     <asp:HiddenField ID="FormIDField" Value=<%# Eval("FormID") %> runat="server" />
                                     <asp:HiddenField ID="FormTypeField" Value=<%# Eval("FormType") %> runat="server" />

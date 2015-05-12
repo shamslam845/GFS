@@ -1,6 +1,7 @@
 ﻿// Coded By: Nicholas Irikawa
-// Project: GFS
+// Project: GFS Anonymous Feedback System
 // Class: 462
+// Group: 2
 
 using System;
 using System.Collections.Generic;

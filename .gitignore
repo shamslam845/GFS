@@ -1,0 +1,8 @@
+*.suo
+GFS/obj/Release/Package/PackageTmp/bin/GFS.dll
+*.pdb
+GFS/obj/Release/GFS.dll
+*.Cache
+GFS/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache
+*.mdf
+*.ldf

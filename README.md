@@ -1,2 +1,0 @@
-# GFS
-Anonymous feedback system.

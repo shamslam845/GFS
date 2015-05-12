@@ -14,6 +14,7 @@ namespace GFS.Logic
         {
             // Access the application context and create result variables.
             Models.ApplicationDbContext context = new ApplicationDbContext();
+            //Models.GFSContext context = new GFSContext();
             IdentityResult IdRoleResult;
             IdentityResult IdUserResult;
 

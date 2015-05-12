@@ -15,6 +15,7 @@ namespace GFS.Account
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             Models.ApplicationDbContext context = new ApplicationDbContext();
+            //Models.GFSContext context = new GFSContext();
 
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
